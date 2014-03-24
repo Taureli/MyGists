@@ -111,6 +111,8 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     will_paginate (3.0.5)
+    will_paginate-bootstrap (0.2.5)
+      will_paginate (>= 3.0.3)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -130,3 +132,4 @@ DEPENDENCIES
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)
   will_paginate (~> 3.0.5)
+  will_paginate-bootstrap (~> 0.2.5)

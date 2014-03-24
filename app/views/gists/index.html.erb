@@ -21,6 +21,8 @@
 		    <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
 	      </tr>
 	    <% end %>
-	    <%= will_paginate @gists %>
 	</table>
+	<div class="offset3">
+	    <%= will_paginate @gists, renderer: BootstrapPagination::Rails %>
+	</div>
 </div>
