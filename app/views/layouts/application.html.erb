@@ -35,42 +35,41 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <%= javascript_include_tag "application" %>
-  </head>
-  <body>
 
-    <div class="navbar navbar-fluid-top">
+<div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">MyGists</a>
+          <div class="brand">MyGists</div>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to 'New Gist', new_gist_path %></li>
               <li><%= link_to 'Show Gists', gists_path %></li>
+              <li><%= link_to 'New Gist', new_gist_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
+  </head>
+  <body>
+
+    
+
     <div class="container-fluid">
       <div class="row-fluid">
-       
-        <div class="span9 offset4">
+        
           <%= bootstrap_flash %>
           <%= yield %>
-        </div>
+
       </div><!--/row-->
-
-      <footer>
-        <p>Site by Jakub Karolczak</p>
-      </footer>
-
     </div> <!-- /container -->
+
+    <div class="container">
+      <br><br>
+      <ul>
+        <p><h5>Site by Jakub Karolczak</h5></p>
+      </ul>
+    </div> <!-- /footer -->
 
   </body>
 </html>

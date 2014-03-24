@@ -1,31 +1,26 @@
-<h1>Listing gists</h1>
+<h1 class="span8 offset2">All gists</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Snippet</th>
-      <th>Lang</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="span8 offset2">
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th>Preview</th>
+	      <th>Language</th>
+	      <th>Description</th>
+	      <th>Options</th>
+	    </tr>
+	  </thead>
 
-  <tbody>
-    <% @gists.each do |gist| %>
-      <tr>
-        <td><%= gist.snippet %></td>
-        <td><%= gist.lang %></td>
-        <td><%= gist.description %></td>
-        <td><%= link_to 'Show', gist %></td>
-        <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
-        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-	<%= will_paginate @gists %>
-  </tbody>
-</table>
-
-<br>
-<br>
+	    <% @gists.each do |gist| %>
+	      <tr>
+		<td><%= raw Pygments.highlight(gist.snippet.squish[0,25], lexer: gist.lang) %></td>
+		<td><%= gist.lang %></td>
+		<td><%= gist.description %></td>
+		<td><%= link_to 'Show', gist, class: 'btn btn-default' %>
+		    <%= link_to 'Edit', edit_gist_path(gist), class: 'btn btn-default' %>
+		    <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+	      </tr>
+	    <% end %>
+	    <%= will_paginate @gists %>
+	</table>
+</div>
