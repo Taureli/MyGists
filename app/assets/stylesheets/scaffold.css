@@ -6,10 +6,6 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
-body {
-	margin-top: 60px;
-}
-
 pre {
   background-color: #eee;
   padding: 10px;
@@ -26,10 +22,18 @@ div.field, div.actions {
 
 textarea {
 	height: 250px;
-	width: 500px;
+}
+
+.input-block-level {
+	display: block;
+	max-width: 500px;
 }
 
 input {
+	width: 500px;
+}
+
+select {
 	width: 500px;
 }
 

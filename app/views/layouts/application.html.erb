@@ -36,20 +36,28 @@
 
     <%= javascript_include_tag "application" %>
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar">
       <div class="navbar-inner">
-        <div class="container-fluid">
+	<a class="btn btn-navbar visible-phone" data-toggle="collapse" data-target=".nav-collapse">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</a>
           <div class="brand">MyGists</div>
+	  <div class="container-fluid visible-tablet">
+            <ul class="nav">
+              <li><%= link_to 'Show Gists', gists_path %></li>
+              <li><%= link_to 'New Gist', new_gist_path %></li>
+            </ul>
+          </div>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to 'Show Gists', gists_path %></li>
               <li><%= link_to 'New Gist', new_gist_path %></li>
             </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+          </div>
       </div>
-    </div>
-
+</div>
   </head>
   <body>
 

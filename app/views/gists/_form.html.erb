@@ -1,4 +1,12 @@
 <%= form_for(@gist) do |f| %>
+
+  <% 
+     b=[]
+     a=Pygments::Lexer.all.select{|y| !(y.filenames.empty?)}.map{|x|[x.name.downcase, x.filenames.first.gsub('*','')]}.sort
+     a.flatten.select.with_index{|a,i| (i+1) % 2 == 1}.each { |e|
+	b.push(e) }
+  %>
+
   <% if @gist.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</h2>
@@ -13,15 +21,15 @@
 
   <div class="field">
     <%= f.label :snippet %><br>
-    <%= f.text_area :snippet %>
+    <%= f.text_area :snippet, class: 'input-block-level' %>
   </div>
   <div class="field">
     <%= f.label :lang %><br>
-    <%= f.text_field :lang %>
+    <%= f.select :lang, b, class: 'input-block-level' %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, class: 'input-block-level' %>
   </div>
   <div class="actions">
     <%= f.submit :class => 'btn btn-success' %>
