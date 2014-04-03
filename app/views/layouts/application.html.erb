@@ -55,6 +55,12 @@
               <li><%= link_to 'Show Gists', gists_path %></li>
               <li><%= link_to 'New Gist', new_gist_path %></li>
             </ul>
+	    <form class="navbar-form pull-right">
+	   	<%= form_tag(gists_path, :method => "get", id: "search-form") do %>
+		<%= text_field_tag :search, params[:search], placeholder: "Find by language", class: 'span2' %>
+		<%= submit_tag "Search", class: 'btn' %>
+		<% end %>
+	    </form>
           </div>
       </div>
 </div>

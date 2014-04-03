@@ -13,6 +13,8 @@ Rails version: 4.0.4
 * Kolorowanie składni w snippetach odpowiednio dla języka
 * Zwiększony rozmiar czcionki
 * Zmieniony rozmiar elementu textarea
+* Responsywnosc
+* Wyszukiwanie gistow po jezyku
 
 ###Wykorzystane gemy:
 
