@@ -1,0 +1,8 @@
+<tr>
+	<td class='hidden-phone hidden-tablet'><%= raw Pygments.highlight(gist.snippet.squish[0,25], lexer: gist.lang) %></td>
+	<td class='hidden-phone'><%= gist.lang %></td>
+	<td><%= gist.description %></td>
+	<td><%= link_to 'Show', gist, class: 'btn btn-default' %>
+	<%= link_to 'Edit', edit_gist_path(gist), class: 'btn btn-default' %>
+	<%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+</tr>

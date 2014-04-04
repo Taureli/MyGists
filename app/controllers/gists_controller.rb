@@ -5,12 +5,13 @@ class GistsController < ApplicationController
   # GET /gists.json
   def index
 
-	if params[:search]
-	@gists = Gist.search(params[:search]).order("created_at DESC").paginate :page => params[:page], :per_page => 5, :order => 'created_at DESC'
-	else
- @gists = Gist.paginate :page => params[:page], :per_page => 5, :order => 'created_at DESC'
-#	@gists = Gist.all.order('created_at DESC')
-	end
+	@gists = Gist.paginate(:page => params[:page]).search(params[:search])
+
+respond_to do |format|
+  format.html
+  format.js
+end
+
   end
 
   # GET /gists/1
