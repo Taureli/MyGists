@@ -1,6 +1,6 @@
 class Gist < ActiveRecord::Base
 
-self.per_page = 8
+self.per_page = 10
 
 def self.search(query)
 	# where(:title, query) -> This would return an exact match of the query
