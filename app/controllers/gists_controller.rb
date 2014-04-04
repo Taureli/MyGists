@@ -5,7 +5,7 @@ class GistsController < ApplicationController
   # GET /gists.json
   def index
 
-	@gists = Gist.paginate(:page => params[:page]).search(params[:search])
+	@gists = Gist.paginate(:page => params[:page]).search(params[:search]).order('updated_at DESC')
 
 respond_to do |format|
   format.html

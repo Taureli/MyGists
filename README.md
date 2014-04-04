@@ -7,7 +7,7 @@ Rails version: 4.0.4
 ###Co zostało zrobione:
 
 * Dodana obsługa Bootstrapa
-* Dodana paginacja (dopasowana do Bootstrapa)
+* Dodana paginacja (dopasowana do Bootstrapa) oraz infinite scrolling
 * Wyświetlanie na stronie głównej jedynie fragmentu gista
 * Dodano przykładowe gisty jako seedy dla bazy danych
 * Kolorowanie składni w snippetach odpowiednio dla języka
