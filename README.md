@@ -1,26 +1,27 @@
-MyGists
-=======
+#MyGists
 
-Ruby version: 2.1.1  
-Rails version: 4.0.4
+######Ruby version: 2.1.1  
+######Rails version: 4.0.4
 
-###Co zostało zrobione:
+Simple application written in Ruby on Rails for storing and browsing gists.
 
-* Dodana obsługa Bootstrapa
- - Przy użyciu gema 'twitter-bootstrap-rails'
-* Dodana paginacja (dopasowana do Bootstrapa) oraz infinite scrolling
- - Przy użyciu gemów 'will_paginate' oraz 'will_paginate-bootstrap'
- - Infinite scrolling na podstawie poradnika: http://www.sitepoint.com/infinite-scrolling-rails-basics/
-* Wyświetlanie na stronie głównej jedynie fragmentu gista
-* Dodano przykładowe gisty jako seedy dla bazy danych
-* Kolorowanie składni w snippetach odpowiednio dla języka
- - Przy użyciu gema 'pygments.rb'
-* Zwiększony rozmiar czcionki
-* Dopasowanie rozmiarów wszystkich elementów
-* Pełna responsywność aplikacji
-* Wyszukiwanie gistów po języku
+###What was done:
 
-###Wykorzystane gemy:
+* Added Bootstrap
+ - Using 'twitter-bootstrap-rails' gem
+* Added pagination (matched for bootstrap) and infinite scrolling
+ - Using gems 'will_paginate' and 'will_paginate-bootstrap'
+ - Infinite scrolling based on tutorial: http://www.sitepoint.com/infinite-scrolling-rails-basics/
+* Displaying only a preview of gist on the main page
+* Added sample gists as seeds for database
+* Colored syntax in snippets based on used language
+ - Using 'pygments.rb' gem
+* Adjusted font size
+* Adjusted the sizes of all elements
+* Fully responsive application
+* Search gists by language
+
+###Used gems:
 
 * gem 'pygments.rb'  
 * gem 'redcarpet'  
@@ -29,5 +30,5 @@ Rails version: 4.0.4
 * gem 'twitter-bootstrap-rails'  
 * gem 'will_paginate-bootstrap', '~> 0.2.5' 
 
-###Aplikacja na Heroku:
+###Application on Heroku:
 http://mygists-jkarolczak.herokuapp.com/
